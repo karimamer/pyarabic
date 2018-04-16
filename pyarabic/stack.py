@@ -2,13 +2,15 @@
 # -*- coding=utf-8 -*-
 """
 Stack module
-@author: Taha Zerrouki
+@author: Taha Zerrouki, karim amer
 @contact: taha dot zerrouki at gmail dot com
 @copyright: Arabtechies,  Arabeyes,   Taha Zerrouki
 @license: GPL
 @date:2010/03/01
 @version: 0.1
 """
+from collections import deque
+
 class Stack(object):
     """
     Stack class
@@ -17,7 +19,7 @@ class Stack(object):
         """
         create a stack
         """
-        self.items = list(text)
+        self.items = deque(text)
 
     def push(self, item):
         """
@@ -46,4 +48,4 @@ class Stack(object):
         @return: True or False
         @rtype: boolean
         """
-        return self.items == []
+        return len(self.items) == 0
